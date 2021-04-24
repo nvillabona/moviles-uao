@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ScreenLogin</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Ingresar_Sesión">Ingresar Sesión</string>
+</resources>
