@@ -16,7 +16,7 @@
             android:layout_width="182dp"
             android:layout_height="205dp"
             android:layout_marginBottom="50dp"
-            app:srcCompat="@drawable/logo_blanco" />
+            app:srcCompat="@drawable/logo_uao" />
 
         <EditText
             android:id="@+id/editText2"
@@ -59,7 +59,7 @@
             android:backgroundTint="@color/azul"
             android:padding="20dp"
             android:radius="200dp"
-            android:text="@string/Ingresar_Sesión"
+            android:text="INICIAR SESIÓN"
             android:textColor="@color/colorwhite" />
     </LinearLayout>
 

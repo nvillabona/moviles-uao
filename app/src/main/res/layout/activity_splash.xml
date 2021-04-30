@@ -19,10 +19,16 @@
             android:gravity="center"
             android:layout_weight="5">
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="123dp"
+                android:layout_height="90dp"
+                app:srcCompat="@drawable/logo_uao" />
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="73dp"
                 android:layout_height="155dp"
-                app:srcCompat="@drawable/logo_blanco" />
+                app:srcCompat="@drawable/Logo_uao" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
