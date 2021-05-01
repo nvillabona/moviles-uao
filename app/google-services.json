@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "229586041380",
+    "firebase_url": "https://project-moviles-default-rtdb.firebaseio.com",
+    "project_id": "project-moviles",
+    "storage_bucket": "project-moviles.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229586041380:android:9e89f48bea6591e56736b1",
+        "android_client_info": {
+          "package_name": "com.example.screenlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229586041380-vit904uu7i69hniukvm0k1cb9rmc1dje.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj_vvH0ZDGup5op1I4Q7whfJNi6fWFwFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229586041380-vit904uu7i69hniukvm0k1cb9rmc1dje.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

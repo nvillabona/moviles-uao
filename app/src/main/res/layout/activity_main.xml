@@ -19,7 +19,7 @@
             app:srcCompat="@drawable/logo_uao" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/TxtEmail"
             android:layout_width="367dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -36,7 +36,7 @@
             android:radius="30dp" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/TxtPassword"
             android:layout_width="364dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -51,7 +51,7 @@
             android:padding="15dp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/botonLogin"
             android:layout_width="328dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
