@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
@@ -77,9 +78,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(MainActivity.this, "Bienvenido: " + user, Toast.LENGTH_LONG).show();
 
                             /* Redirección a página */
-                            //Intent intencion = new Intent(getApplication(), WellcomeActivity.class);
-                            //intencion.putExtra(WellcomeActivity.user, user);
-                            //startActivity(intencion);
+                            Intent intencion = new Intent(getApplication(), StudentActivity.class);
+                            //intencion.putExtra(StudentActivity.user, user);
+                            startActivity(intencion);
                         } else{
                             //Si se presenta una colisión..
                             if(task.getException() instanceof FirebaseAuthUserCollisionException){
