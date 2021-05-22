@@ -6,12 +6,14 @@ public class Class {
     private String descripcion;
     private String fechas;
     private String horario;
+    private String codigoProfesor;
 
-    public Class(String nombre, String descripcion, String fechas, String horario) {
+    public Class(String nombre, String descripcion, String fechas, String horario, String codigoProfesor) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechas = fechas;
         this.horario = horario;
+        this.codigoProfesor = codigoProfesor;
     }
 
     /* El constructor vacío es necesario */
@@ -49,5 +51,13 @@ public class Class {
 
     public void setHorario(String horario) {
         this.horario = horario;
+    }
+
+    public String getCodigoProfesor() {
+        return codigoProfesor;
+    }
+
+    public void setCodigoProfesor(String codigoProfesor) {
+        this.codigoProfesor = codigoProfesor;
     }
 }

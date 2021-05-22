@@ -1,7 +1,11 @@
 package com.example.screenlogin;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -12,7 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -36,7 +42,7 @@ public class StudentActivity extends AppCompatActivity {
         // Metodo que encuentra por id
         findViews();
         // Metodo que valida con clic los item de la lista para desplegar Modal
-        //initListner();
+        initListner();
     }
 
     //  Metodo que encuentra por id
@@ -84,9 +90,48 @@ public class StudentActivity extends AppCompatActivity {
                             listViewClass.setAdapter(ClassAdapter);
 
                         } else {
-                            System.out.println("¡ALGO SALIO MAL!");
+                            System.out.println("¡ALGO SALIÓ MAL!");
                         }
                     }
                 });
+    }
+
+    private void initListner() {  // Método que valida el evento click
+
+        //  Al dar click a un item de la lista de cursos
+        listViewClass.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                // Validamos por id el item de la lista de cursos
+                Class Clase = Clases.get(i);
+
+                // Create a reference to the cities collection
+                CollectionReference Profesores = databaseReference.collection("profesor");
+
+                // Create a query against the collection.
+                Query query = Profesores.whereEqualTo("codigo", Clase.getCodigoProfesor());
+
+                query.get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        Teacher profesor = document.toObject(Teacher.class);
+                                       // Toast.makeText(StudentActivity.this, profesor.getNombres(), Toast.LENGTH_LONG).show();
+
+                                        /* Redirección a página */
+                                        Intent intencion = new Intent(StudentActivity.this, CourseTeachers.class);
+                                        intencion.putExtra("teacherClass", profesor);
+                                        intencion.putExtra("clase", Clase.getNombre()+"");
+                                        startActivity(intencion);
+                                    }
+                                } else {
+                                    System.out.println("¡ALGO SALIÓ MAL!");
+                                }
+                            }
+                        });
+            }
+        });
     }
 }
