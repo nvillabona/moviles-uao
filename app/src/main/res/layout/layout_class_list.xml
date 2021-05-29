@@ -1,34 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTintMode="src_in"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/nombreCurso"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
+        android:background="@color/azul"
+        android:gravity="center|center_vertical"
         android:text="Fisica 1"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorwhite" />
 
     <TextView
         android:id="@+id/descripcionCurso"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="37dp"
+        android:gravity="center|center_vertical"
         android:text="Movimiento acelerado, Dinámica, Caida libre."
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/fechasCurso"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="23dp"
+        android:gravity="center|center_vertical"
         android:text="Inicio: 10/10/2021 \nFin: 10/11/2021"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/horariosCurso"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="34dp"
+        android:gravity="center|center_vertical"
         android:text="Lun-Vie 8-9PM"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black" />
 
 </LinearLayout>

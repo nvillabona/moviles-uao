@@ -1,14 +1,18 @@
 package com.example.screenlogin;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class CourseTeachers extends AppCompatActivity {
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
+
+
+public class CourseTeachers extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     private TextView txtClase, txtNombres, txtHorario, txtCorreo, txtTelefono;
+    YouTubePlayer player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +30,27 @@ public class CourseTeachers extends AppCompatActivity {
         String clase = getIntent().getStringExtra("clase");
 
         txtClase.setText(clase);
-        txtNombres.setText("Profesor: "+ profesor.getNombres() + " " + profesor.getApellidos());
-        txtHorario.setText("Horario de atención: " + profesor.getHorarios());
-        txtCorreo.setText("Correo: " + profesor.getCorreo());
-        txtTelefono.setText("Contacto: " + profesor.getTelefono());
+        txtNombres.setText(profesor.getNombres() + " " + profesor.getApellidos());
+        txtHorario.setText(profesor.getHorarios());
+        txtCorreo.setText(profesor.getCorreo());
+        txtTelefono.setText(profesor.getTelefono());
 
         //Toast.makeText(CourseTeachers.this, profesor.getNombres(), Toast.LENGTH_LONG).show();
+
+        YouTubePlayerView playerView = (YouTubePlayerView)findViewById(R.id.youTubePlayerView);
+        playerView.initialize(DeveloperKey.DEVELOPER_KEY,this);
+    }
+
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean b) {
+        this.player = player;
+        if(!b){
+            player.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
+            player.loadVideo("PXj5QghExJA");
+        }
+    }
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
     }
 }

@@ -4,62 +4,159 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EAE0E0"
     tools:context=".CourseTeachers">
 
     <TextView
         android:id="@+id/tvNombreClase"
         android:layout_width="match_parent"
-        android:layout_height="31dp"
+        android:layout_height="54dp"
         android:layout_x="0dp"
-        android:layout_y="52dp"
+        android:layout_y="0dp"
+        android:background="@color/azul"
         android:gravity="center"
         android:text="Fisica X"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="40dp" />
 
     <TextView
+        android:id="@+id/tvNombreClase2"
+        android:layout_width="411dp"
+        android:layout_height="54dp"
+        android:layout_x="0dp"
+        android:layout_y="230dp"
+        android:background="@color/azul"
+        android:gravity="center"
+        android:text="Clase en vivo"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youTubePlayerView"
+        android:layout_width="381dp"
+        android:layout_height="157dp"
+        android:layout_x="15dp"
+        android:layout_y="298dp"></com.google.android.youtube.player.YouTubePlayerView>
+
+    <TextView
         android:id="@+id/tvNombreProfesor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="58dp"
-        android:layout_y="110dp"
-        android:text="Profesor: Nombre + Apellido"
+        android:layout_x="157dp"
+        android:layout_y="78dp"
+        android:text="Nombre + Apellido"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="110dp" />
 
     <TextView
-        android:id="@+id/tvHorariosAs"
+        android:id="@+id/tvNombreProfesor2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="57dp"
-        android:layout_y="143dp"
-        android:text="Horarios de asesoria: 00 - 00 M"
+        android:layout_x="72dp"
+        android:layout_y="78dp"
+        android:text="Profesor: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <TextView
+        android:id="@+id/tvTeléfono"
+        android:layout_width="229dp"
+        android:layout_height="wrap_content"
+        android:layout_x="154dp"
+        android:layout_y="174dp"
+        android:text="+57 555 5555 Ext:1100"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <TextView
+        android:id="@+id/tvTeléfono2"
+        android:layout_width="79dp"
+        android:layout_height="wrap_content"
+        android:layout_x="72dp"
+        android:layout_y="174dp"
+        android:text="Teléfono:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <TextView
+        android:id="@+id/tvHorariosAs"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_x="250dp"
+        android:layout_y="110dp"
+        android:text="00 - 00 M"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="146dp" />
 
     <TextView
-        android:id="@+id/tvCorreo"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvHorariosAs2"
+        android:layout_width="182dp"
         android:layout_height="wrap_content"
-        android:layout_x="58dp"
-        android:layout_y="175dp"
-        android:text="Correo: alguien@uao.edu.co"
+        android:layout_x="71dp"
+        android:layout_y="110dp"
+        android:text="Horarios de asesoria:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_x="138dp"
+        android:layout_y="142dp"
+        android:text="alguien@uao.edu.co"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="181dp" />
 
     <TextView
-        android:id="@+id/tvTeléfono"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvCorreo2"
+        android:layout_width="62dp"
         android:layout_height="wrap_content"
-        android:layout_x="58dp"
-        android:layout_y="207dp"
-        android:text="Teléfono: +57 555 5555 Ext:1100"
+        android:layout_x="72dp"
+        android:layout_y="142dp"
+        android:text="Correo:"
         android:textSize="18sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="216dp" />
+        tools:layout_editor_absoluteY="181dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="491dp"
+        android:layout_x="55dp"
+        android:layout_y="401dp"
+        app:srcCompat="@drawable/mapsexample" />
+
+    <TextView
+        android:id="@+id/tvNombreClase3"
+        android:layout_width="411dp"
+        android:layout_height="54dp"
+        android:layout_x="0dp"
+        android:layout_y="474dp"
+        android:background="@color/azul"
+        android:gravity="center"
+        android:text="Ubicación de la clase"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="40dp" />
+
 </AbsoluteLayout>
