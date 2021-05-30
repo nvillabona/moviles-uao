@@ -1,8 +1,11 @@
 package com.example.screenlogin;
 
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -47,7 +50,15 @@ public class CourseTeachers extends AppCompatActivity {
         videoView.setMediaController(mediaController); //
         mediaController.setAnchorView(videoView);
 
+        // Función MAPS
+        ImageView MapImage = (ImageView)findViewById(R.id.MapImage);
+        MapImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /* Redirección a página */
+                Intent intencion = new Intent(CourseTeachers.this, MapsActivity.class);
+                startActivity(intencion);
+            }
+        });
     }
-
-
 }

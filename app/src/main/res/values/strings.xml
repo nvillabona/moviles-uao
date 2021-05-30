@@ -3,4 +3,5 @@
     <string name="contraseña">Contraseña</string>
     <string name="Usuario">Usuario</string>
     <string name="Ingresar_Sesión">Ingresar Sesión</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

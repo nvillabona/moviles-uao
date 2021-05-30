@@ -120,6 +120,10 @@ public class StudentActivity extends AppCompatActivity {
                                         //startActivity(intencion);
 
                                         /* Redirección a página */
+                                        /*Intent intencion = new Intent(StudentActivity.this, MapsActivity.class);
+                                        startActivity(intencion);*/
+
+                                        /* Redirección a página */
                                         Intent intencion = new Intent(StudentActivity.this, CourseTeachers.class);
                                         intencion.putExtra("teacherClass", profesor);
                                         intencion.putExtra("clase", Clase.getNombre()+"");
