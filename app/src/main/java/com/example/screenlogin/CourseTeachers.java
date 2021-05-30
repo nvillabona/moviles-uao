@@ -1,18 +1,19 @@
 package com.example.screenlogin;
 
+
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
-import com.google.android.youtube.player.YouTubeBaseActivity;
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerView;
+import androidx.appcompat.app.AppCompatActivity;
 
 
-public class CourseTeachers extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
+public class CourseTeachers extends AppCompatActivity {
 
     private TextView txtClase, txtNombres, txtHorario, txtCorreo, txtTelefono;
-    YouTubePlayer player;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,20 +38,16 @@ public class CourseTeachers extends YouTubeBaseActivity implements YouTubePlayer
 
         //Toast.makeText(CourseTeachers.this, profesor.getNombres(), Toast.LENGTH_LONG).show();
 
-        YouTubePlayerView playerView = (YouTubePlayerView)findViewById(R.id.youTubePlayerView);
-        playerView.initialize(DeveloperKey.DEVELOPER_KEY,this);
-    }
-
-    @Override
-    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean b) {
-        this.player = player;
-        if(!b){
-            player.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
-            player.loadVideo("PXj5QghExJA");
-        }
-    }
-    @Override
-    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+        // Importación del video
+        VideoView videoView = findViewById(R.id.vv1);// Layout VideoView
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.videouao; // ruta del video
+        Uri uri = Uri.parse(videoPath); //uri
+        videoView.setVideoURI(uri); // seteamos uri al componente videoView
+        MediaController mediaController = new MediaController(this); // Controladores del video
+        videoView.setMediaController(mediaController); //
+        mediaController.setAnchorView(videoView);
 
     }
+
+
 }

@@ -2,14 +2,9 @@ package com.example.screenlogin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -119,6 +114,10 @@ public class StudentActivity extends AppCompatActivity {
                                     for (QueryDocumentSnapshot document : task.getResult()) {
                                         Teacher profesor = document.toObject(Teacher.class);
                                        // Toast.makeText(StudentActivity.this, profesor.getNombres(), Toast.LENGTH_LONG).show();
+
+                                        /* Redirección a página */
+                                        //Intent intencion = new Intent(StudentActivity.this, VideoPlayer.class);
+                                        //startActivity(intencion);
 
                                         /* Redirección a página */
                                         Intent intencion = new Intent(StudentActivity.this, CourseTeachers.class);
