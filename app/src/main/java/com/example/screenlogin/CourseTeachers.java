@@ -57,6 +57,8 @@ public class CourseTeachers extends AppCompatActivity {
             public void onClick(View view) {
                 /* Redirección a página */
                 Intent intencion = new Intent(CourseTeachers.this, MapsActivity.class);
+                intencion.putExtra("longitud", getIntent().getDoubleExtra("longitud", -76.5311599318801));
+                intencion.putExtra("latitud", getIntent().getDoubleExtra("latitud", 3.4594911028997593));
                 startActivity(intencion);
             }
         });

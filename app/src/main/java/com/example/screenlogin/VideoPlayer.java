@@ -15,7 +15,7 @@ public class VideoPlayer extends AppCompatActivity {
         setContentView(R.layout.activity_video_player);
 
         VideoView videoView = findViewById(R.id.video_view);// Layout VideoView
-        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.videouao; // ruta del video
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.intromono; // ruta del video
         Uri uri = Uri.parse(videoPath); //uri
         videoView.setVideoURI(uri); // seteamos uri al componente videoView
         MediaController mediaController = new MediaController(this); // Controladores del video

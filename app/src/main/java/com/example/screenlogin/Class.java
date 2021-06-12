@@ -7,13 +7,17 @@ public class Class {
     private String fechas;
     private String horario;
     private String codigoProfesor;
+    private double Latitud;
+    private double Longitud;
 
-    public Class(String nombre, String descripcion, String fechas, String horario, String codigoProfesor) {
+    public Class(String nombre, String descripcion, String fechas, String horario, String codigoProfesor, double latitud, double longitud) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechas = fechas;
         this.horario = horario;
         this.codigoProfesor = codigoProfesor;
+        Latitud = latitud;
+        Longitud = longitud;
     }
 
     /* El constructor vacío es necesario */
@@ -59,5 +63,21 @@ public class Class {
 
     public void setCodigoProfesor(String codigoProfesor) {
         this.codigoProfesor = codigoProfesor;
+    }
+
+    public double getLatitud() {
+        return Latitud;
+    }
+
+    public void setLatitud(double latitud) {
+        Latitud = latitud;
+    }
+
+    public double getLongitud() {
+        return Longitud;
+    }
+
+    public void setLongitud(double longitud) {
+        Longitud = longitud;
     }
 }

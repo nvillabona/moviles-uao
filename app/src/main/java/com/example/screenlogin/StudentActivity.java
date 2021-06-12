@@ -116,8 +116,8 @@ public class StudentActivity extends AppCompatActivity {
                                        // Toast.makeText(StudentActivity.this, profesor.getNombres(), Toast.LENGTH_LONG).show();
 
                                         /* Redirección a página */
-                                        //Intent intencion = new Intent(StudentActivity.this, VideoPlayer.class);
-                                        //startActivity(intencion);
+                                        /*Intent intencion = new Intent(StudentActivity.this, VideoPlayer.class);
+                                        startActivity(intencion);*/
 
                                         /* Redirección a página */
                                         /*Intent intencion = new Intent(StudentActivity.this, MapsActivity.class);
@@ -127,6 +127,8 @@ public class StudentActivity extends AppCompatActivity {
                                         Intent intencion = new Intent(StudentActivity.this, CourseTeachers.class);
                                         intencion.putExtra("teacherClass", profesor);
                                         intencion.putExtra("clase", Clase.getNombre()+"");
+                                        intencion.putExtra("longitud", Clase.getLongitud());
+                                        intencion.putExtra("latitud", Clase.getLatitud());
                                         startActivity(intencion);
                                     }
                                 } else {
